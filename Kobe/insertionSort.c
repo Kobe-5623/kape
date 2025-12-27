@@ -8,7 +8,6 @@ int* randNums(int size) {
         return NULL;
     }
 
-    srand(time(NULL));
 
     for (int i = 0; i < size; i++) {
         int num = rand() % 100;
@@ -19,6 +18,7 @@ int* randNums(int size) {
 }
 
 int main() {
+    srand(time(NULL));
 
 
     return 0;

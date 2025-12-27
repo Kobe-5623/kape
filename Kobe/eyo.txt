@@ -1,0 +1,29 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+data = {
+    'insertion': [0.002, 0.004, 0.005, 0.007, 0.008, 0.008],
+    'selection': [0.003, 0.005, 0.005, 0.008, 0.008, 0.008],
+    'n': [100, 1_000, 10_000, 1_000_000, 2_000_000, 10_000_000]
+}
+
+df = pd.DataFrame(data)
+
+plt.figure(figsize=(10, 6))
+
+plt.plot(df['n'], df['insertion'], marker='o', linestyle='-', color='blue', label='Insertion')
+plt.plot(df['n'], df['selection'], marker='o', linestyle='-', color='green', label='Selection')
+
+for x, y in zip(df['n'], df['insertion']):
+    plt.text(x, y, f"{y}", ha='center', va='bottom')
+
+for x, y in zip(df['n'], df['selection']):
+    plt.text(x, y, f"{y}", ha='center', va='bottom')
+
+plt.title('Speed vs N')
+plt.xlabel('n')
+plt.ylabel('Time')
+plt.grid(True)
+plt.legend()
+plt.xscale('log')
+plt.show()

@@ -19,7 +19,7 @@ int *randNums() {
     return nums;
 }
 
-void *sort(int *nums) {
+void sort(int *nums) {
 
     for (int i = 0; i < N - 1; i++) {
         int min = i;
