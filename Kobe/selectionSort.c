@@ -46,6 +46,6 @@ int main() {
 
     sort(nums);
 
-
+    free(nums);
     return 0;
 }
