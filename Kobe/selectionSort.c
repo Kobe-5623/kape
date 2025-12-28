@@ -10,7 +10,6 @@ int *randNums() {
         return NULL;
     }
 
-
     for (int i = 0; i < N; i++) {
         int num = rand() % 100;
         nums[i] = num;
@@ -19,11 +18,11 @@ int *randNums() {
     return nums;
 }
 
+
 void sort(int *nums) {
 
     for (int i = 0; i < N - 1; i++) {
         int min = i;
-
 
         for (int j = i + 1; j < N; j++) {
             if (nums[j] < nums[min]) {
@@ -38,6 +37,7 @@ void sort(int *nums) {
         }
     }   
 }
+
 
 int main() {
     srand(time(NULL));
