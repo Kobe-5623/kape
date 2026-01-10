@@ -45,6 +45,10 @@ int main() {
 
     sort(nums);
 
+    // for (int i = 0; i < N; i++) {
+    //     printf("%d\n", nums[i]);
+    // }
+
     free(nums);
     return 0;
 }
